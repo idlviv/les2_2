@@ -9,14 +9,12 @@ window.addEventListener('load', function wListener() {
 
   button.innerHTML = 'Порахувати';
 
-
   div.innerHTML = 'Не число';
   div.className = 'error-message';
 
   div2.innerHTML = 'Не число';
   div2.className = 'error-message';
 
-  div3.innerHTML = 'Результат';
   div3.id = 'error-message';
 
   function isNumeric(n) {
@@ -45,12 +43,9 @@ window.addEventListener('load', function wListener() {
       body.insertBefore(div2, button);
     }
     if (isNumeric(input1.value) && isNumeric(input2.value)) {
-      div3.innerHTML = +input1.value + +input2.value;
+      var sum = +input1.value + +input2.value;
+      div3.innerHTML = 'Результат ' + sum;
       body.appendChild(div3);
     }
-
-
-
   })
-
 });
